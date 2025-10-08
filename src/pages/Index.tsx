@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TeamCarousel from "@/components/TeamCarousel";
 import Articles from "@/components/Articles";
@@ -13,7 +12,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Stories />
-      <Navigation />
       <main>
         <Hero />
         <TeamCarousel />

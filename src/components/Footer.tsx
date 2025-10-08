@@ -1,5 +1,4 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
-import buzzLogo from "@/assets/buzz-logo.jpeg";
 
 const Footer = () => {
   return (
@@ -8,7 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo & About */}
           <div className="md:col-span-2">
-            <img src={buzzLogo} alt="THE BUZZ Logo" className="h-16 mb-4 brightness-0 invert" />
+            <div className="h-16 w-32 bg-primary-foreground/20 rounded mb-4 flex items-center justify-center">
+              <span className="font-display font-bold text-2xl">BUZZ</span>
+            </div>
             <p className="text-sm opacity-80 max-w-md">
               A creative hub by BEEZGLAM STUDIOS. Where every detail is crafted with you in mind.
               Specializing in photography, videography, and creative media production.

@@ -56,12 +56,12 @@ const InstagramFeed = () => {
             asChild
           >
             <a
-              href="https://www.instagram.com/the.buzz_sandstone"
+              href="https://www.instagram.com/the.buzz_sandton"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram className="mr-2" />
-              @the.buzz_sandstone
+              @the.buzz_sandton
             </a>
           </Button>
         </div>
