@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 opacity-80">
                 <MapPin className="w-4 h-4" />
-                Sandstone, South Africa
+                Sandton, South Africa
               </li>
               <li className="flex items-center gap-2 opacity-80">
                 <Phone className="w-4 h-4" />
@@ -45,13 +45,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/the.buzz_sandstone"
+                  href="https://www.instagram.com/the.buzz_sandton"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
                 >
                   <Instagram className="w-4 h-4" />
-                  @the.buzz_sandstone
+                  @the.buzz_sandton
                 </a>
               </li>
             </ul>

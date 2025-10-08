@@ -6,10 +6,13 @@ import Events from "@/components/Events";
 import InstagramFeed from "@/components/InstagramFeed";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Stories from "@/components/Stories";
+import AIChat from "@/components/AIChat";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Stories />
       <Navigation />
       <main>
         <Hero />
@@ -20,6 +23,7 @@ const Index = () => {
         <ContactForm />
       </main>
       <Footer />
+      <AIChat />
     </div>
   );
 };

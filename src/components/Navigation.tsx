@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Youtube, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import buzzLogo from "@/assets/buzz-logo.jpeg";
+import { SiTiktok, SiSpotify } from "react-icons/si";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,9 +32,24 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img src={buzzLogo} alt="THE BUZZ Logo" className="h-12 object-contain" />
-          </Link>
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            <a href="https://www.instagram.com/the.buzz_sandton" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <SiTiktok className="w-5 h-5" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <Youtube className="w-5 h-5" />
+            </a>
+            <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <SiSpotify className="w-5 h-5" />
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
