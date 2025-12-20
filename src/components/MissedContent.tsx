@@ -6,12 +6,11 @@ const MissedContent = () => {
           In Case You Missed It...
         </h2>
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <div className="relative w-full aspect-video">
             <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg border-0"
               src="https://www.youtube.com/embed/wsxrEpfstX4"
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />

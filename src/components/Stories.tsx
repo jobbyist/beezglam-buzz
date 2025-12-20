@@ -94,8 +94,7 @@ const Stories = () => {
                 <div className="w-full h-full">
                   <iframe
                     src={`${selectedStory.video}/embed`}
-                    className="w-full h-full"
-                    frameBorder="0"
+                    className="w-full h-full border-0"
                     allowFullScreen
                     allow="autoplay"
                   />
