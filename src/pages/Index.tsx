@@ -7,6 +7,8 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Stories from "@/components/Stories";
 import AIChat from "@/components/AIChat";
+import MissedContent from "@/components/MissedContent";
+import MerchCollaboration from "@/components/MerchCollaboration";
 
 const Index = () => {
   return (
@@ -15,6 +17,8 @@ const Index = () => {
       <main>
         <Hero />
         <TeamCarousel />
+        <MissedContent />
+        <MerchCollaboration />
         <Articles />
         <Events />
         <InstagramFeed />
