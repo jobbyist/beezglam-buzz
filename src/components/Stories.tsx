@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import storyPlaceholder from "@/assets/the-buzz-story-cover.png";
 
 interface Story {
   id: string;
@@ -90,22 +91,11 @@ const Stories = () => {
         <DialogContent className="max-w-md p-0 bg-black border-none">
           {selectedStory && (
             <div className="relative aspect-[9/16]">
-              {selectedStory.video ? (
-                <div className="w-full h-full">
-                  <iframe
-                    src={`${selectedStory.video}/embed`}
-                    className="w-full h-full border-0"
-                    allowFullScreen
-                    allow="autoplay"
-                  />
-                </div>
-              ) : (
-                <img
-                  src={selectedStory.image}
-                  alt={selectedStory.username}
-                  className="w-full h-full object-cover"
-                />
-              )}
+              <img
+                src={storyPlaceholder}
+                alt="The Buzz Story"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute top-4 left-4 right-4 flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-0.5">
                   <img
