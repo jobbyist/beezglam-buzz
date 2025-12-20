@@ -5,11 +5,19 @@ interface Story {
   id: string;
   username: string;
   image: string;
+  video?: string;
+  link?: string;
 }
 
 const stories: Story[] = [
   { id: "1", username: "@beezglam_studios", image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400" },
-  { id: "2", username: "@janefinesse_", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" },
+  { 
+    id: "2", 
+    username: "@solo.sae", 
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+    video: "https://streamable.com/6dzx0n",
+    link: "https://instagram.com/the.buzz_sandton"
+  },
   { id: "3", username: "@daystarofficial_", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" },
   { id: "4", username: "@justine.george", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" },
   { id: "5", username: "@official808x", image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400" },
@@ -82,11 +90,23 @@ const Stories = () => {
         <DialogContent className="max-w-md p-0 bg-black border-none">
           {selectedStory && (
             <div className="relative aspect-[9/16]">
-              <img
-                src={selectedStory.image}
-                alt={selectedStory.username}
-                className="w-full h-full object-cover"
-              />
+              {selectedStory.video ? (
+                <div className="w-full h-full">
+                  <iframe
+                    src={`${selectedStory.video}/embed`}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay"
+                  />
+                </div>
+              ) : (
+                <img
+                  src={selectedStory.image}
+                  alt={selectedStory.username}
+                  className="w-full h-full object-cover"
+                />
+              )}
               <div className="absolute top-4 left-4 right-4 flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-0.5">
                   <img
@@ -95,7 +115,18 @@ const Stories = () => {
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-                <span className="text-white font-semibold">{selectedStory.username}</span>
+                {selectedStory.link ? (
+                  <a
+                    href={selectedStory.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-semibold hover:text-accent transition-colors"
+                  >
+                    {selectedStory.username}
+                  </a>
+                ) : (
+                  <span className="text-white font-semibold">{selectedStory.username}</span>
+                )}
               </div>
             </div>
           )}
